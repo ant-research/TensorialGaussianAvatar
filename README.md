@@ -3,6 +3,7 @@
 Yating Wang<sup>1</sup>, [Xuan Wang](https://xuanwangvc.github.io/)<sup>2</sup>, [Ran Yi](https://yiranran.github.io/)<sup>1</sup>, [Yanbo Fan](https://sites.google.com/site/yanbofan0124/)<sup>2</sup>, Jichen Hu<sup>1</sup>, Jingcheng Zhu<sup>1</sup>, [Lizhuang Ma](https://dmcv.sjtu.edu.cn/)<sup>1</sup>
 
 Shanghai Jiaotong University<sup>1</sup>, AntGroup Research<sup>2</sup>
+[arxiv](https://arxiv.org/abs/2504.14967)
 
 This is the official implementation of the paper "3D Gaussian Head Avatars with Expressive Dynamic Appearances by Compact Tensorial Representations"
 
