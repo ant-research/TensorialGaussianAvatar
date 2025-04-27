@@ -19,7 +19,7 @@ This is the official implementation of the paper "3D Gaussian Head Avatars with 
 2. install requirements
    
 	```
-      conda activate gsavatar
+      conda create -n gsavatar python=3.10
 
       # install cuda11.6, pytorch1.13.0, torchvision0.14.0
 
@@ -44,7 +44,6 @@ python expr_analyze.py
 
 #extract jaw rotation basis
 python preprocess_jaw.py
-
 ```
 
 ### Training
