@@ -1,8 +1,7 @@
-source /data1/wangyating/miniconda3/etc/profile.d/conda.sh
 conda activate gsavatar
 
 export CUDA_VISIBLE_DEVICES=1
-subjects=(165 175) # 074 104 
+subjects=(074)
 
 for SUBJECT in "${subjects[@]}"; do
     python train.py \

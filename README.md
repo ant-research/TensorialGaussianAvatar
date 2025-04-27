@@ -1,4 +1,4 @@
-# 3D Gaussian Head Avatars with Expressive Dynamic Appearances by Compact Tensorial Representations(CVPR2025)
+# CVPR2025 - 3D Gaussian Head Avatars with Expressive Dynamic Appearances by Compact Tensorial Representations
 
 Yating Wang<sup>1</sup>, [Xuan Wang](https://xuanwangvc.github.io/)<sup>2</sup>, [Ran Yi](https://yiranran.github.io/)<sup>1</sup>, [Yanbo Fan](https://sites.google.com/site/yanbofan0124/)<sup>2</sup>, Jichen Hu<sup>1</sup>, Jingcheng Zhu<sup>1</sup>, [Lizhuang Ma](https://dmcv.sjtu.edu.cn/)<sup>1</sup>
 
@@ -8,20 +8,23 @@ Shanghai Jiaotong University<sup>1</sup>, AntGroup Research<sup>2</sup>
 
 This is the official implementation of the paper "3D Gaussian Head Avatars with Expressive Dynamic Appearances by Compact Tensorial Representations"
 
+![pipeline](figures/pipeline.png)
+
 ## Install
 
 1. clone this repo
    
-   `git clone  --recursive`
+   `git clone https://github.com/ant-research/TensorialGaussianAvatar.git  --recursive`
    
-2. install cuda and pytorch
-	
-	Our experiments are conducted with cuda11.6, pytorch1.13.0, torchvision0.14.0
-
-3. install requirements
+2. install requirements
    
-	`pip install -r requirements.txt`
+	```
+      conda activate gsavatar
 
+      # install cuda11.6, pytorch1.13.0, torchvision0.14.0
+
+      pip install -r requirements.txt
+      ```
 ---
 
 ## Dataset and Preprocessing
@@ -35,7 +38,14 @@ We test our method on [NeRSemble](https://github.com/tobias-kirschstein/nersembl
 ## Usage
 ### Preprocess
 
-python 
+```
+# cluster expressions, please modify the dataset root path and test person id 
+python expr_analyze.py
+
+#extract jaw rotation basis
+python preprocess_jaw.py
+
+```
 
 ### Training
 
@@ -60,7 +70,8 @@ This work was heavily inspired by [GaussianAvatars](https://github.com/ShenhanQi
 ## Cite
 If you find our paper or code useful in your research, please cite us with the following BibTeX:
 
-`@misc{wang20253dgaussianheadavatars,
+```
+@misc{wang20253dgaussianheadavatars,
       title={3D Gaussian Head Avatars with Expressive Dynamic Appearances by Compact Tensorial Representations}, 
       author={Yating Wang and Xuan Wang and Ran Yi and Yanbo Fan and Jichen Hu and Jingcheng Zhu and Lizhuang Ma},
       year={2025},
@@ -68,5 +79,6 @@ If you find our paper or code useful in your research, please cite us with the f
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2504.14967}, 
-}`
+}
+```
 

@@ -1,0 +1,3 @@
+# macOS system files
+.DS_Store
+**/.DS_Store  # 递归匹配所有子目录
