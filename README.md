@@ -70,14 +70,12 @@ This work was heavily inspired by [GaussianAvatars](https://github.com/ShenhanQi
 If you find our paper or code useful in your research, please cite us with the following BibTeX:
 
 ```
-@misc{wang20253dgaussianheadavatars,
-      title={3D Gaussian Head Avatars with Expressive Dynamic Appearances by Compact Tensorial Representations}, 
-      author={Yating Wang and Xuan Wang and Ran Yi and Yanbo Fan and Jichen Hu and Jingcheng Zhu and Lizhuang Ma},
-      year={2025},
-      eprint={2504.14967},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2504.14967}, 
+@inproceedings{wang20253d,
+  title={3D Gaussian Head Avatars with Expressive Dynamic Appearances by Compact Tensorial Representations},
+  author={Wang, Yating and Wang, Xuan and Yi, Ran and Fan, Yanbo and Hu, Jichen and Zhu, Jingcheng and Ma, Lizhuang},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={21117--21126},
+  year={2025}
 }
 ```
 
