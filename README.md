@@ -4,7 +4,7 @@ Yating Wang<sup>1</sup>, [Xuan Wang](https://xuanwangvc.github.io/)<sup>2</sup>,
 
 Shanghai Jiaotong University<sup>1</sup>, AntGroup Research<sup>2</sup>
 
-[arxiv](https://arxiv.org/abs/2504.14967)
+[arxiv](https://arxiv.org/abs/2504.14967), [project](https://wang-yating.github.io/TensorialGaussianAvatars/), [paper](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_3D_Gaussian_Head_Avatars_with_Expressive_Dynamic_Appearances_by_Compact_CVPR_2025_paper.pdf)
 
 This is the official implementation of the paper "3D Gaussian Head Avatars with Expressive Dynamic Appearances by Compact Tensorial Representations"
 
