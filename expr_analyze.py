@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 import cv2 as cv
 import os
 import json
-from mesh import TriMesh
 import sys 
 sys.path.append('.')
 from flame_model.flame import FlameHead
@@ -78,7 +77,7 @@ def clustering(points, num_clusters):
 ids = ['074']
 
 flame_model = FlameHead(shape_params=300,expr_params=100)
-with open('flame_model/assets/flame/FLAME_masks.pkl', "rb") as f:
+with open('./flame_model/assets/flame/FLAME_masks.pkl', "rb") as f:
     ss = pickle.load(f, encoding="latin1")
     flame_masks = Struct(**ss)
     eye_in_flame = torch.from_numpy(flame_masks.eye_region)
@@ -91,9 +90,8 @@ neigh.fit(vmean[face_in_flame].numpy())
 eye = vmean[eye_in_flame].numpy()
 eye_in_face = neigh.kneighbors(eye, return_distance = False).flatten()
 
-template = TriMesh()
-template.load('flame_model/assets/flame/head_template_mesh.obj')
-flame_root = '' #please modify to your own dataset path, for example '/dataset/cluster/ikarus/sqian/project/dynamic-head-avatars/code/multi-view-head-tracker/export/'
+flame_root = '/data1/wangyating/dataset/cluster/ikarus/sqian/project/dynamic-head-avatars/code/multi-view-head-tracker/export/'
+# flame_root = '' #please modify to your own dataset path
 for id in ids:
     print(id)
     verts_neutral = None
@@ -113,9 +111,9 @@ for id in ids:
         neck_pose, jaw_pose, eyes_pose = flame_param['neck_pose'], flame_param['jaw_pose'], flame_param['eyes_pose']
         shape, expr = flame_param['shape'][None, :], flame_param['expr']
         static_offset = flame_param['static_offset']
-        verts_unposed, _, J_unposed = flame_model(shape, expr, rotation * 0, neck_pose * 0, jaw_pose, eyes_pose, translation * 0, static_offset = static_offset)
+        verts_unposed, _ = flame_model(shape, expr, rotation * 0, neck_pose * 0, jaw_pose, eyes_pose, translation * 0, static_offset = static_offset)
         if verts_neutral is None:
-            verts_neutral, _, J = flame_model(shape, expr * 0, rotation * 0, neck_pose * 0, jaw_pose*0, eyes_pose*0, translation * 0, static_offset = static_offset)
+            verts_neutral, _ = flame_model(shape, expr * 0, rotation * 0, neck_pose * 0, jaw_pose*0, eyes_pose*0, translation * 0, static_offset = static_offset)
 
         bias = verts_unposed - verts_neutral
         bias[:, eye_in_flame, :] *= 2 #add weight to eye region vertices when calculating face motion
