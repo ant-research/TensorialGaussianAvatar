@@ -30,7 +30,7 @@ This is the official implementation of the paper "3D Gaussian Head Avatars with 
 ## Dataset and Preprocessing
 
 ### FLAME Model
-Our method relies on FLAME face prior model(2023 version). Please download FLAME assets from [flame project](https://flame.is.tue.mpg.de/index.html), put flame2023.pkl(versions w/ jaw rotation) to flame_model/assets/flame/flame2023.pkl and put FLAME_masks.pkl to flame_model/assets/flame/FLAME_masks.pkl
+Our method relies on FLAME face prior model(2023 version). Please download FLAME assets from [flame project](https://flame.is.tue.mpg.de/index.html), put flame2023.pkl(versions w/ jaw rotation) to flame_model/assets/flame/flame2023.pkl and put FLAME_masks.pkl to flame_model/assets/flame/FLAME_masks.pkl. And download [files](https://github.com/ShenhanQian/GaussianAvatars/tree/main/flame_model/assets/flame) to flame_model/assets/flame/
 
 ### Test Data
 We test our method on [NeRSemble](https://github.com/tobias-kirschstein/nersemble) multi-view human head videos dataset, which is preprocessed by [GaussianAvatars(CVPR2024)](https://github.com/ShenhanQian/GaussianAvatars/tree/main), please refers to [GaussianAvatars](https://github.com/ShenhanQian/GaussianAvatars/blob/main/doc/download.md) to download test data. Unlike GaussianAvatars, we use free performance sequences as the test set and other video segments as the training set.
